@@ -7,7 +7,6 @@
 //
 
 #import "UILabel+NvLabel.h"
-#import "AlbumUtils.h"
 
 @implementation UILabel (NvLabel)
 
@@ -16,7 +15,13 @@
     label.textColor = textColor;
     label.textAlignment = NSTextAlignmentCenter;
     label.text = text;
-    label.font = [AlbumUtils fontWithSize:fontSize];
+    UIFont *font;
+    if (![UIFont fontWithName:@"PingFangSC-Semibold" size:fontSize]) {
+        font = [UIFont boldSystemFontOfSize:fontSize];
+    } else {
+        font = [UIFont fontWithName:@"PingFangSC-Semibold" size:fontSize];
+    }
+    label.font = font;
     return label;
 }
 

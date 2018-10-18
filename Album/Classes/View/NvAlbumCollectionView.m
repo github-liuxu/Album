@@ -9,15 +9,8 @@
 #import "NvAlbumCollectionView.h"
 #import "NvAllAssetCell.h"
 #import "NvAlbumItem.h"
+#import "NvAlbumUtils.h"
 #import "NvAlbumViewController.h"
-#import "AlbumUtils.h"
-#import "Masonry.h"
-#import "NVDefineConfig.h"
-#import "UIColor+NvColor.h"
-#import "UIButton+NvButton.h"
-#import "UILabel+NvLabel.h"
-#import "UIView+Dimension.h"
-#import "NvButton.h"
 @import Photos;
 
 @interface NvAlbumCollectionView ()<UICollectionViewDelegate, UICollectionViewDataSource>
@@ -231,7 +224,7 @@ static NSString *kHeaderPHAssetIdentify = @"kHeaderPHAssetIdentify";
     flowLayout.minimumLineSpacing = 4*SCREANSCALE;
     flowLayout.minimumInteritemSpacing = 4*SCREANSCALE;
     flowLayout.itemSize = CGSizeMake(85*SCREANSCALE, 85*SCREANSCALE);
-    flowLayout.headerReferenceSize = CGSizeMake(SCREENWIDTH, 39*SCREANSCALE);
+    flowLayout.headerReferenceSize = CGSizeMake(SCREEN_WDITH, 39*SCREANSCALE);
     self.allAssetColloection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     self.allAssetColloection.delegate = self;
     self.allAssetColloection.dataSource = self;

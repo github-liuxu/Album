@@ -12,10 +12,7 @@
 #import "NvAlbumCollectionView.h"
 #import "NvSizeViewController.h"
 #import "NvFetchAlbum.h"
-#import "Masonry.h"
-#import "NVDefineConfig.h"
-#import "AlbumUtils.h"
-#import "NvButton.h"
+#import "NvAlbumUtils.h"
 
 @import Photos;
 
@@ -56,8 +53,6 @@
 - (instancetype)init {
     if (self = [super init]) {
         self.selectAssetSource = [NSMutableArray array];
-        self.isOnlyImage = NO;
-        self.isOnlyVideo = NO;
         self.mutableSelect = YES;
         
         self.maxSelectCount = 0;
@@ -71,9 +66,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor blackColor];
-    
-    self.view.backgroundColor = UIColorFromRGB(0x242728);
     self.navigationController.navigationBar.translucent = NO;
     UIBarButtonItem *item = [UIBarButtonItem appearance];
     NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:0.001],
@@ -83,8 +75,9 @@
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColor.whiteColor, NSFontAttributeName:[UIFont systemFontOfSize:19]}];
     
+    self.view.backgroundColor = [UIColor blackColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [NvAlbumUtils fontWithSize:19], NSFontAttributeName, nil]];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self leftNavigationBarItemView]];
-    
     [self initSubViews];
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(realodData) name:@"NvReloadAlbumData" object:nil];
 }
@@ -104,17 +97,21 @@
 
 - (UIView *)leftNavigationBarItemView {
     UIButton *backButton;
-    backButton = [UIButton nv_buttonWithTitle:nil textColor:nil fontSize:15 image:[AlbumUtils imageWithName:@"icon_back"]];
+    backButton = [UIButton nv_buttonWithTitle:nil textColor:nil fontSize:15 image:[NvAlbumUtils imageWithName:@"icon_back"]];
     backButton.frame = CGRectMake(0, 0, 44, 44);
     __weak typeof(self)weakSelf = self;
     [backButton nv_BtnClickHandler:^{
         if ([weakSelf.delegate respondsToSelector:@selector(nvAlbumViewControllerCancelClick:)]) {
             [weakSelf.delegate nvAlbumViewControllerCancelClick:weakSelf];
         } else {
-            if (weakSelf.navigationController.topViewController != weakSelf) {
+            if (self.navigationController.viewControllers.count == 1) {
                 [weakSelf dismissViewControllerAnimated:YES completion:NULL];
             } else {
-                [weakSelf.navigationController popViewControllerAnimated:YES];
+                if (weakSelf.navigationController.topViewController != weakSelf) {
+                    [weakSelf dismissViewControllerAnimated:YES completion:NULL];
+                } else {
+                    [weakSelf.navigationController popViewControllerAnimated:YES];
+                }
             }
         }
     }];
@@ -195,9 +192,9 @@
 
         float collectionViewHeight = 0;
         if (self.isOnlyImage || self.isOnlyVideo) {
-            collectionViewHeight = SCREENHEIGTH - NV_STATUSBARHEIGHT - 44- 49*SCREANSCALE;
+            collectionViewHeight = SCREEN_HEIGTH - NV_STATUSBARHEIGHT - 44- 49*SCREANSCALE;
         } else {
-            collectionViewHeight = SCREENHEIGTH - NV_STATUSBARHEIGHT - 44 - 44*SCREANSCALE - 49*SCREANSCALE;
+            collectionViewHeight = SCREEN_HEIGTH - NV_STATUSBARHEIGHT - 44 - 44*SCREANSCALE - 49*SCREANSCALE;
         }
         
         if (self.isOnlyImage) {
@@ -259,9 +256,9 @@
         
         float collectionViewHeight = 0;
         if (self.isOnlyImage || self.isOnlyVideo) {
-            collectionViewHeight = SCREENHEIGTH - NV_STATUSBARHEIGHT - 44;
+            collectionViewHeight = SCREEN_HEIGTH - NV_STATUSBARHEIGHT - 44;
         } else {
-            collectionViewHeight = SCREENHEIGTH - NV_STATUSBARHEIGHT - 44 - 44*SCREANSCALE;
+            collectionViewHeight = SCREEN_HEIGTH - NV_STATUSBARHEIGHT - 44 - 44*SCREANSCALE;
         }
         
         if (self.isOnlyImage) {
@@ -313,7 +310,7 @@
 }
 
 - (void)videoClick {
-    [self.scrollView setContentOffset:CGPointMake(SCREENWIDTH, 0) animated:YES];
+    [self.scrollView setContentOffset:CGPointMake(SCREEN_WDITH, 0) animated:YES];
     [self.allButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.videoButton setTitleColor:[UIColor nv_colorWithHexRGB:@"#4A90E2"] forState:UIControlStateNormal];
     [self.imageButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -327,7 +324,7 @@
 }
 
 - (void)imageClick {
-    [self.scrollView setContentOffset:CGPointMake(2*SCREENWIDTH, 0) animated:YES];
+    [self.scrollView setContentOffset:CGPointMake(2*SCREEN_WDITH, 0) animated:YES];
     [self.allButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.videoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.imageButton setTitleColor:[UIColor nv_colorWithHexRGB:@"#4A90E2"] forState:UIControlStateNormal];
@@ -370,7 +367,7 @@
             make.left.equalTo(@(0*SCREANSCALE));
             make.top.equalTo(@(0*SCREANSCALE));
             make.bottom.equalTo(@(0*SCREANSCALE));
-            make.width.equalTo(@(SCREENWIDTH/3.0));
+            make.width.equalTo(@(SCREEN_WDITH/3.0));
         }];
         
         [self.allButton nv_BtnClickHandler:^{
@@ -422,9 +419,9 @@
     }];
     float collectionViewHeight = 0;
     if (self.isOnlyImage || self.isOnlyVideo) {
-        collectionViewHeight = SCREENHEIGTH - NV_STATUSBARHEIGHT - 44;
+        collectionViewHeight = SCREEN_HEIGTH - NV_STATUSBARHEIGHT - 44;
     } else {
-        collectionViewHeight = SCREENHEIGTH - NV_STATUSBARHEIGHT - 44 - 44*SCREANSCALE;
+        collectionViewHeight = SCREEN_HEIGTH - NV_STATUSBARHEIGHT - 44 - 44*SCREANSCALE;
     }
     NvAlbumAssetType type;
     if (self.isOnlyImage) {
@@ -444,7 +441,7 @@
         [self.imageCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.bottom.equalTo(@0);
             make.left.equalTo(@0);
-            make.width.equalTo(@(SCREENWIDTH));
+            make.width.equalTo(@(SCREEN_WDITH));
             make.height.equalTo(@(collectionViewHeight)).priorityLow();
         }];
         self.album = [NvFetchAlbum new];
@@ -463,7 +460,7 @@
         [self.videoCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.bottom.equalTo(@0);
             make.left.equalTo(@0);
-            make.width.equalTo(@(SCREENWIDTH));
+            make.width.equalTo(@(SCREEN_WDITH));
             make.height.equalTo(@(collectionViewHeight)).priorityLow();
         }];
         self.album = [NvFetchAlbum new];
@@ -481,7 +478,7 @@
         self.albumCollectionView.delegate = self;
         [self.albumCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.bottom.equalTo(@0);
-            make.width.equalTo(@(SCREENWIDTH));
+            make.width.equalTo(@(SCREEN_WDITH));
             make.height.equalTo(@(collectionViewHeight)).priorityLow();
         }];
         
@@ -492,7 +489,7 @@
         self.videoCollectionView.delegate = self;
         [self.videoCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.equalTo(@0);
-            make.width.equalTo(@(SCREENWIDTH));
+            make.width.equalTo(@(SCREEN_WDITH));
             make.height.equalTo(@(collectionViewHeight)).priorityLow();
             make.left.equalTo(self.albumCollectionView.mas_right);
         }];
@@ -505,7 +502,7 @@
         [self.imageCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.bottom.equalTo(@0);
             make.left.equalTo(self.videoCollectionView.mas_right);
-            make.width.equalTo(@(SCREENWIDTH));
+            make.width.equalTo(@(SCREEN_WDITH));
             make.height.equalTo(@(collectionViewHeight)).priorityLow();
         }];
         
@@ -605,9 +602,9 @@
 
 // MARK: UIScrollViewDelegate
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    if ((*targetContentOffset).x/SCREENWIDTH == 0) {
+    if ((*targetContentOffset).x/SCREEN_WDITH == 0) {
         [self allContentsClick];
-    } else if ((*targetContentOffset).x/SCREENWIDTH == 1) {
+    } else if ((*targetContentOffset).x/SCREEN_WDITH == 1) {
         [self videoClick];
     } else {
         [self imageClick];

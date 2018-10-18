@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AlbumUtils.h"
+#import "NvAlbumUtils.h"
 @class NvSizeView;
 
 @protocol NvSizeViewDelegate

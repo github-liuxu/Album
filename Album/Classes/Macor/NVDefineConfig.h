@@ -9,9 +9,17 @@
 #ifndef NVDefineConfig_h
 #define NVDefineConfig_h
 
+typedef enum {
+    NvEditMode16v9 = 0,
+    NvEditMode1v1,
+    NvEditMode9v16,
+    NvEditMode3v4,
+    NvEditMode4v3
+} NvEditMode;
+
 //获取屏幕尺寸
-#define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
-#define SCREENHEIGTH [[UIScreen mainScreen] bounds].size.height
+#define SCREEN_WDITH [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGTH [[UIScreen mainScreen] bounds].size.height
 //是否是iPhoneX
 #define KIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 

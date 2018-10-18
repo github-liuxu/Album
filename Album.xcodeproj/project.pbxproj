@@ -7,36 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C688DF62178CADE000F8131 /* NvAlbumImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C688DF52178CADD000F8131 /* NvAlbumImage.bundle */; };
+		0C688E3E2178CC9B000F8131 /* AlbumLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C688E372178CC9B000F8131 /* AlbumLib.framework */; };
+		0C688E3F2178CC9B000F8131 /* AlbumLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C688E372178CC9B000F8131 /* AlbumLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C688E432178CCBB000F8131 /* NvAlbumViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CBAF1FE217783AE006C726C /* NvAlbumViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C688E442178CCC0000F8131 /* NvAlbumItem.m in Headers */ = {isa = PBXBuildFile; fileRef = 0CBAF202217783AE006C726C /* NvAlbumItem.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C688E452178CCDF000F8131 /* NvAlbumImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C688DF52178CADD000F8131 /* NvAlbumImage.bundle */; };
+		0C688E462178CCF7000F8131 /* NvSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1F3217783AE006C726C /* NvSizeView.m */; };
+		0C688E472178CCFB000F8131 /* NvAlbumCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1F5217783AE006C726C /* NvAlbumCollectionView.m */; };
+		0C688E482178CCFE000F8131 /* NvAllAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1F8217783AE006C726C /* NvAllAssetCell.m */; };
+		0C688E492178CD04000F8131 /* NvAlbumItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF202217783AE006C726C /* NvAlbumItem.m */; };
+		0C688E4A2178CD10000F8131 /* NvFetchAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1FB217783AE006C726C /* NvFetchAlbum.m */; };
+		0C688E4B2178CD2C000F8131 /* UIColor+NvColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C688E282178CBE2000F8131 /* UIColor+NvColor.m */; };
+		0C688E4C2178CD2C000F8131 /* UIView+Dimension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C688E2B2178CBE2000F8131 /* UIView+Dimension.m */; };
+		0C688E4D2178CD2C000F8131 /* UIButton+NvButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C688E2C2178CBE2000F8131 /* UIButton+NvButton.m */; };
+		0C688E4E2178CD2C000F8131 /* UILabel+NvLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C688E2D2178CBE2000F8131 /* UILabel+NvLabel.m */; };
+		0C688E4F2178CD2C000F8131 /* NvButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C688DFF2178CBA4000F8131 /* NvButton.m */; };
+		0C688E502178CD2C000F8131 /* NvAlbumUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C688DF92178CB04000F8131 /* NvAlbumUtils.m */; };
+		0C688E512178CD2C000F8131 /* NvAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF200217783AE006C726C /* NvAlbumViewController.m */; };
+		0C688E522178CD2C000F8131 /* NvSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1FF217783AE006C726C /* NvSizeViewController.m */; };
+		0C688F192178DA47000F8131 /* libMasonry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C688F182178DA47000F8131 /* libMasonry.a */; };
 		0CBAF1DD21778300006C726C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1DC21778300006C726C /* AppDelegate.m */; };
 		0CBAF1E021778300006C726C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1DF21778300006C726C /* ViewController.m */; };
 		0CBAF1E321778300006C726C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBAF1E121778300006C726C /* Main.storyboard */; };
 		0CBAF1E521778301006C726C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBAF1E421778301006C726C /* Assets.xcassets */; };
 		0CBAF1E821778301006C726C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBAF1E621778301006C726C /* LaunchScreen.storyboard */; };
 		0CBAF1EB21778301006C726C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1EA21778301006C726C /* main.m */; };
-		0CBAF204217783AE006C726C /* NvSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1F3217783AE006C726C /* NvSizeView.m */; };
-		0CBAF205217783AE006C726C /* NvAlbumCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1F5217783AE006C726C /* NvAlbumCollectionView.m */; };
-		0CBAF206217783AE006C726C /* NvAllAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1F8217783AE006C726C /* NvAllAssetCell.m */; };
-		0CBAF207217783AE006C726C /* NvFetchAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1FB217783AE006C726C /* NvFetchAlbum.m */; };
-		0CBAF208217783AE006C726C /* NvSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF1FF217783AE006C726C /* NvSizeViewController.m */; };
-		0CBAF209217783AE006C726C /* NvAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF200217783AE006C726C /* NvAlbumViewController.m */; };
-		0CBAF20A217783AE006C726C /* NvAlbumItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF202217783AE006C726C /* NvAlbumItem.m */; };
-		0CBAF20E217783FE006C726C /* AlbumUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF20D217783FE006C726C /* AlbumUtils.m */; };
-		0CBAF21821778817006C726C /* UIColor+NvColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF21221778817006C726C /* UIColor+NvColor.m */; };
-		0CBAF21921778817006C726C /* UIView+Dimension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF21521778817006C726C /* UIView+Dimension.m */; };
-		0CBAF21A21778817006C726C /* UIButton+NvButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF21621778817006C726C /* UIButton+NvButton.m */; };
-		0CBAF21B21778817006C726C /* UILabel+NvLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF21721778817006C726C /* UILabel+NvLabel.m */; };
-		0CBAF23F21778C5A006C726C /* NvButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAF23521778C5A006C726C /* NvButton.m */; };
-		0CBAF25F217791B3006C726C /* AlbumImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0CBAF25E217791B3006C726C /* AlbumImage.bundle */; };
-		E420F47E68E6FB5798FDB8B0 /* libPods-Album.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B284989426C75523E29F887D /* libPods-Album.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C688E3C2178CC9B000F8131 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CBAF1D021778300006C726C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C688E362178CC9B000F8131;
+			remoteInfo = AlbumLib;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0CBAF2712177973E006C726C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0C688E3F2178CC9B000F8131 /* AlbumLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +60,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C688DF52178CADD000F8131 /* NvAlbumImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NvAlbumImage.bundle; sourceTree = "<group>"; };
+		0C688DF82178CB04000F8131 /* NvAlbumUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvAlbumUtils.h; sourceTree = "<group>"; };
+		0C688DF92178CB04000F8131 /* NvAlbumUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvAlbumUtils.m; sourceTree = "<group>"; };
+		0C688DFC2178CB77000F8131 /* NVDefineConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVDefineConfig.h; sourceTree = "<group>"; };
+		0C688DFE2178CBA4000F8131 /* NvButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvButton.h; sourceTree = "<group>"; };
+		0C688DFF2178CBA4000F8131 /* NvButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvButton.m; sourceTree = "<group>"; };
+		0C688E262178CBE2000F8131 /* UIButton+NvButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NvButton.h"; sourceTree = "<group>"; };
+		0C688E272178CBE2000F8131 /* UIView+Dimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Dimension.h"; sourceTree = "<group>"; };
+		0C688E282178CBE2000F8131 /* UIColor+NvColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NvColor.m"; sourceTree = "<group>"; };
+		0C688E292178CBE2000F8131 /* UILabel+NvLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NvLabel.h"; sourceTree = "<group>"; };
+		0C688E2A2178CBE2000F8131 /* UIColor+NvColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NvColor.h"; sourceTree = "<group>"; };
+		0C688E2B2178CBE2000F8131 /* UIView+Dimension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Dimension.m"; sourceTree = "<group>"; };
+		0C688E2C2178CBE2000F8131 /* UIButton+NvButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NvButton.m"; sourceTree = "<group>"; };
+		0C688E2D2178CBE2000F8131 /* UILabel+NvLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NvLabel.m"; sourceTree = "<group>"; };
+		0C688E372178CC9B000F8131 /* AlbumLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlbumLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C688E3A2178CC9B000F8131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C688E592178CE2A000F8131 /* AlbumLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumLibTests.m; sourceTree = "<group>"; };
+		0C688E5B2178CE2A000F8131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C688ED92178D727000F8131 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C688F182178DA47000F8131 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBAF1D821778300006C726C /* Album.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Album.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBAF1DB21778300006C726C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0CBAF1DC21778300006C726C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -68,42 +104,97 @@
 		0CBAF200217783AE006C726C /* NvAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvAlbumViewController.m; sourceTree = "<group>"; };
 		0CBAF202217783AE006C726C /* NvAlbumItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvAlbumItem.m; sourceTree = "<group>"; };
 		0CBAF203217783AE006C726C /* NvAlbumItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvAlbumItem.h; sourceTree = "<group>"; };
-		0CBAF20C217783FE006C726C /* AlbumUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumUtils.h; sourceTree = "<group>"; };
-		0CBAF20D217783FE006C726C /* AlbumUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumUtils.m; sourceTree = "<group>"; };
-		0CBAF21021778817006C726C /* UIButton+NvButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NvButton.h"; sourceTree = "<group>"; };
-		0CBAF21121778817006C726C /* UIView+Dimension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Dimension.h"; sourceTree = "<group>"; };
-		0CBAF21221778817006C726C /* UIColor+NvColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NvColor.m"; sourceTree = "<group>"; };
-		0CBAF21321778817006C726C /* UILabel+NvLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NvLabel.h"; sourceTree = "<group>"; };
-		0CBAF21421778817006C726C /* UIColor+NvColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NvColor.h"; sourceTree = "<group>"; };
-		0CBAF21521778817006C726C /* UIView+Dimension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Dimension.m"; sourceTree = "<group>"; };
-		0CBAF21621778817006C726C /* UIButton+NvButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NvButton.m"; sourceTree = "<group>"; };
-		0CBAF21721778817006C726C /* UILabel+NvLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NvLabel.m"; sourceTree = "<group>"; };
-		0CBAF21C21778859006C726C /* NVDefineConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVDefineConfig.h; sourceTree = "<group>"; };
-		0CBAF22221778C5A006C726C /* NvButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NvButton.h; sourceTree = "<group>"; };
-		0CBAF23521778C5A006C726C /* NvButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NvButton.m; sourceTree = "<group>"; };
-		0CBAF25E217791B3006C726C /* AlbumImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlbumImage.bundle; sourceTree = "<group>"; };
 		0CBAF28921779A45006C726C /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1837266FABA7CBD098CC2995 /* Pods-Album.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Album.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Album/Pods-Album.debug.xcconfig"; sourceTree = "<group>"; };
+		27B341BE321147DBB1CDD1B0 /* Pods-AlbumLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbumLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlbumLib/Pods-AlbumLib.release.xcconfig"; sourceTree = "<group>"; };
+		385216C7A4FE58C860E329E0 /* libPods-AlbumLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlbumLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D847C6AE58D97E1D1467710 /* Pods-AlbumLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlbumLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlbumLib/Pods-AlbumLib.debug.xcconfig"; sourceTree = "<group>"; };
 		B284989426C75523E29F887D /* libPods-Album.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Album.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D462C5323A55483686EF4C50 /* Pods-Album.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Album.release.xcconfig"; path = "Pods/Target Support Files/Pods-Album/Pods-Album.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0C688E342178CC9B000F8131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C688F192178DA47000F8131 /* libMasonry.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CBAF1D521778300006C726C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E420F47E68E6FB5798FDB8B0 /* libPods-Album.a in Frameworks */,
+				0C688E3E2178CC9B000F8131 /* AlbumLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C688DF72178CB04000F8131 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0C688DF82178CB04000F8131 /* NvAlbumUtils.h */,
+				0C688DF92178CB04000F8131 /* NvAlbumUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0C688DFB2178CB77000F8131 /* Macor */ = {
+			isa = PBXGroup;
+			children = (
+				0C688DFC2178CB77000F8131 /* NVDefineConfig.h */,
+			);
+			path = Macor;
+			sourceTree = "<group>";
+		};
+		0C688DFD2178CBA4000F8131 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				0C688DFE2178CBA4000F8131 /* NvButton.h */,
+				0C688DFF2178CBA4000F8131 /* NvButton.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		0C688E252178CBE2000F8131 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0C688E262178CBE2000F8131 /* UIButton+NvButton.h */,
+				0C688E272178CBE2000F8131 /* UIView+Dimension.h */,
+				0C688E282178CBE2000F8131 /* UIColor+NvColor.m */,
+				0C688E292178CBE2000F8131 /* UILabel+NvLabel.h */,
+				0C688E2A2178CBE2000F8131 /* UIColor+NvColor.h */,
+				0C688E2B2178CBE2000F8131 /* UIView+Dimension.m */,
+				0C688E2C2178CBE2000F8131 /* UIButton+NvButton.m */,
+				0C688E2D2178CBE2000F8131 /* UILabel+NvLabel.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		0C688E382178CC9B000F8131 /* AlbumLib */ = {
+			isa = PBXGroup;
+			children = (
+				0C688E3A2178CC9B000F8131 /* Info.plist */,
+			);
+			path = AlbumLib;
+			sourceTree = "<group>";
+		};
+		0C688E582178CE2A000F8131 /* AlbumLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C688E592178CE2A000F8131 /* AlbumLibTests.m */,
+				0C688E5B2178CE2A000F8131 /* Info.plist */,
+			);
+			path = AlbumLibTests;
+			sourceTree = "<group>";
+		};
 		0CBAF1CF21778300006C726C = {
 			isa = PBXGroup;
 			children = (
 				0CBAF1DA21778300006C726C /* Album */,
+				0C688E382178CC9B000F8131 /* AlbumLib */,
+				0C688E582178CE2A000F8131 /* AlbumLibTests */,
 				0CBAF1D921778300006C726C /* Products */,
 				11297DBF33A72DC3937A99B6 /* Pods */,
 				1EEE4D3ADFA1F279FE27DE6F /* Frameworks */,
@@ -114,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				0CBAF1D821778300006C726C /* Album.app */,
+				0C688E372178CC9B000F8131 /* AlbumLib.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,11 +230,11 @@
 		0CBAF1F121778395006C726C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0CBAF25E217791B3006C726C /* AlbumImage.bundle */,
-				0CBAF21E21778C5A006C726C /* CommonView */,
-				0CBAF21D2177885E006C726C /* Macro */,
-				0CBAF20F21778817006C726C /* Category */,
-				0CBAF20B217783E2006C726C /* Utils */,
+				0C688E252178CBE2000F8131 /* Category */,
+				0C688DFD2178CBA4000F8131 /* CustomView */,
+				0C688DFB2178CB77000F8131 /* Macor */,
+				0C688DF72178CB04000F8131 /* Utils */,
+				0C688DF52178CADD000F8131 /* NvAlbumImage.bundle */,
 				0CBAF1FC217783AE006C726C /* Controller */,
 				0CBAF1F9217783AE006C726C /* FetchAlbum */,
 				0CBAF201217783AE006C726C /* Model */,
@@ -193,52 +285,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0CBAF20B217783E2006C726C /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				0CBAF20C217783FE006C726C /* AlbumUtils.h */,
-				0CBAF20D217783FE006C726C /* AlbumUtils.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		0CBAF20F21778817006C726C /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				0CBAF21021778817006C726C /* UIButton+NvButton.h */,
-				0CBAF21121778817006C726C /* UIView+Dimension.h */,
-				0CBAF21221778817006C726C /* UIColor+NvColor.m */,
-				0CBAF21321778817006C726C /* UILabel+NvLabel.h */,
-				0CBAF21421778817006C726C /* UIColor+NvColor.h */,
-				0CBAF21521778817006C726C /* UIView+Dimension.m */,
-				0CBAF21621778817006C726C /* UIButton+NvButton.m */,
-				0CBAF21721778817006C726C /* UILabel+NvLabel.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		0CBAF21D2177885E006C726C /* Macro */ = {
-			isa = PBXGroup;
-			children = (
-				0CBAF21C21778859006C726C /* NVDefineConfig.h */,
-			);
-			path = Macro;
-			sourceTree = "<group>";
-		};
-		0CBAF21E21778C5A006C726C /* CommonView */ = {
-			isa = PBXGroup;
-			children = (
-				0CBAF22221778C5A006C726C /* NvButton.h */,
-				0CBAF23521778C5A006C726C /* NvButton.m */,
-			);
-			path = CommonView;
-			sourceTree = "<group>";
-		};
 		11297DBF33A72DC3937A99B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1837266FABA7CBD098CC2995 /* Pods-Album.debug.xcconfig */,
-				D462C5323A55483686EF4C50 /* Pods-Album.release.xcconfig */,
+				6D847C6AE58D97E1D1467710 /* Pods-AlbumLib.debug.xcconfig */,
+				27B341BE321147DBB1CDD1B0 /* Pods-AlbumLib.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -246,20 +297,53 @@
 		1EEE4D3ADFA1F279FE27DE6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C688F182178DA47000F8131 /* libMasonry.a */,
+				0C688ED92178D727000F8131 /* libMasonry.a */,
 				0CBAF28921779A45006C726C /* libMasonry.a */,
 				B284989426C75523E29F887D /* libPods-Album.a */,
+				385216C7A4FE58C860E329E0 /* libPods-AlbumLib.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0C688E322178CC9B000F8131 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C688E432178CCBB000F8131 /* NvAlbumViewController.h in Headers */,
+				0C688E442178CCC0000F8131 /* NvAlbumItem.m in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		0C688E362178CC9B000F8131 /* AlbumLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C688E402178CC9B000F8131 /* Build configuration list for PBXNativeTarget "AlbumLib" */;
+			buildPhases = (
+				D5DAFCA17F94DCAF1C067E08 /* [CP] Check Pods Manifest.lock */,
+				0C688E322178CC9B000F8131 /* Headers */,
+				0C688E332178CC9B000F8131 /* Sources */,
+				0C688E342178CC9B000F8131 /* Frameworks */,
+				0C688E352178CC9B000F8131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlbumLib;
+			productName = AlbumLib;
+			productReference = 0C688E372178CC9B000F8131 /* AlbumLib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		0CBAF1D721778300006C726C /* Album */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CBAF1EE21778301006C726C /* Build configuration list for PBXNativeTarget "Album" */;
 			buildPhases = (
-				C3EE99B0140638EA7EDD6019 /* [CP] Check Pods Manifest.lock */,
 				0CBAF1D421778300006C726C /* Sources */,
 				0CBAF1D521778300006C726C /* Frameworks */,
 				0CBAF1D621778300006C726C /* Resources */,
@@ -268,6 +352,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0C688E3D2178CC9B000F8131 /* PBXTargetDependency */,
 			);
 			name = Album;
 			productName = Album;
@@ -283,6 +368,9 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "刘东旭";
 				TargetAttributes = {
+					0C688E362178CC9B000F8131 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					0CBAF1D721778300006C726C = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -302,26 +390,35 @@
 			projectRoot = "";
 			targets = (
 				0CBAF1D721778300006C726C /* Album */,
+				0C688E362178CC9B000F8131 /* AlbumLib */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0C688E352178CC9B000F8131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C688E452178CCDF000F8131 /* NvAlbumImage.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CBAF1D621778300006C726C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0CBAF1E821778301006C726C /* LaunchScreen.storyboard in Resources */,
-				0CBAF25F217791B3006C726C /* AlbumImage.bundle in Resources */,
 				0CBAF1E521778301006C726C /* Assets.xcassets in Resources */,
 				0CBAF1E321778300006C726C /* Main.storyboard in Resources */,
+				0C688DF62178CADE000F8131 /* NvAlbumImage.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C3EE99B0140638EA7EDD6019 /* [CP] Check Pods Manifest.lock */ = {
+		D5DAFCA17F94DCAF1C067E08 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -332,7 +429,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Album-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AlbumLib-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -342,30 +439,45 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0C688E332178CC9B000F8131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C688E462178CCF7000F8131 /* NvSizeView.m in Sources */,
+				0C688E472178CCFB000F8131 /* NvAlbumCollectionView.m in Sources */,
+				0C688E482178CCFE000F8131 /* NvAllAssetCell.m in Sources */,
+				0C688E492178CD04000F8131 /* NvAlbumItem.m in Sources */,
+				0C688E4A2178CD10000F8131 /* NvFetchAlbum.m in Sources */,
+				0C688E4B2178CD2C000F8131 /* UIColor+NvColor.m in Sources */,
+				0C688E4C2178CD2C000F8131 /* UIView+Dimension.m in Sources */,
+				0C688E4D2178CD2C000F8131 /* UIButton+NvButton.m in Sources */,
+				0C688E4E2178CD2C000F8131 /* UILabel+NvLabel.m in Sources */,
+				0C688E4F2178CD2C000F8131 /* NvButton.m in Sources */,
+				0C688E502178CD2C000F8131 /* NvAlbumUtils.m in Sources */,
+				0C688E512178CD2C000F8131 /* NvAlbumViewController.m in Sources */,
+				0C688E522178CD2C000F8131 /* NvSizeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CBAF1D421778300006C726C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CBAF20A217783AE006C726C /* NvAlbumItem.m in Sources */,
 				0CBAF1E021778300006C726C /* ViewController.m in Sources */,
-				0CBAF205217783AE006C726C /* NvAlbumCollectionView.m in Sources */,
-				0CBAF206217783AE006C726C /* NvAllAssetCell.m in Sources */,
-				0CBAF204217783AE006C726C /* NvSizeView.m in Sources */,
-				0CBAF207217783AE006C726C /* NvFetchAlbum.m in Sources */,
-				0CBAF21B21778817006C726C /* UILabel+NvLabel.m in Sources */,
 				0CBAF1EB21778301006C726C /* main.m in Sources */,
-				0CBAF21A21778817006C726C /* UIButton+NvButton.m in Sources */,
-				0CBAF21921778817006C726C /* UIView+Dimension.m in Sources */,
-				0CBAF20E217783FE006C726C /* AlbumUtils.m in Sources */,
-				0CBAF23F21778C5A006C726C /* NvButton.m in Sources */,
-				0CBAF209217783AE006C726C /* NvAlbumViewController.m in Sources */,
 				0CBAF1DD21778300006C726C /* AppDelegate.m in Sources */,
-				0CBAF208217783AE006C726C /* NvSizeViewController.m in Sources */,
-				0CBAF21821778817006C726C /* UIColor+NvColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C688E3D2178CC9B000F8131 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C688E362178CC9B000F8131 /* AlbumLib */;
+			targetProxy = 0C688E3C2178CC9B000F8131 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0CBAF1E121778300006C726C /* Main.storyboard */ = {
@@ -387,6 +499,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0C688E412178CC9B000F8131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D847C6AE58D97E1D1467710 /* Pods-AlbumLib.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z5E3E2D8FE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = AlbumLib/Info.plist;
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liudongxu.AlbumLib;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0C688E422178CC9B000F8131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27B341BE321147DBB1CDD1B0 /* Pods-AlbumLib.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z5E3E2D8FE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = AlbumLib/Info.plist;
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liudongxu.AlbumLib;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		0CBAF1EC21778301006C726C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -501,12 +677,14 @@
 		};
 		0CBAF1EF21778301006C726C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1837266FABA7CBD098CC2995 /* Pods-Album.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z5E3E2D8FE;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/$(CONTENTS_FOLDER_PATH)/Headers";
 				INFOPLIST_FILE = Album/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -519,12 +697,14 @@
 		};
 		0CBAF1F021778301006C726C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D462C5323A55483686EF4C50 /* Pods-Album.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z5E3E2D8FE;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/$(CONTENTS_FOLDER_PATH)/Headers";
 				INFOPLIST_FILE = Album/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,6 +718,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0C688E402178CC9B000F8131 /* Build configuration list for PBXNativeTarget "AlbumLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C688E412178CC9B000F8131 /* Debug */,
+				0C688E422178CC9B000F8131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0CBAF1D321778300006C726C /* Build configuration list for PBXProject "Album" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

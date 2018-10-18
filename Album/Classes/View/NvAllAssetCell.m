@@ -7,10 +7,7 @@
 //
 
 #import "NvAllAssetCell.h"
-#import "AlbumUtils.h"
-#import "Masonry.h"
-#import "NVDefineConfig.h"
-
+#import "NvAlbumUtils.h"
 @import Photos;
 
 @interface NvAllAssetCell ()
@@ -55,7 +52,7 @@
         self.numLabel = [UILabel new];
         self.numLabel.textColor = [UIColor whiteColor];
         self.numLabel.textAlignment = NSTextAlignmentCenter;
-        self.numLabel.font = [AlbumUtils fontWithSize:32*SCREANSCALE];
+        self.numLabel.font = [NvAlbumUtils fontWithSize:32*SCREANSCALE];
         [self.layerView addSubview:self.numLabel];
         [self.numLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.equalTo(self.contentView);
@@ -73,7 +70,7 @@
                                      };
         NSMutableAttributedString *attribtStr = [[NSMutableAttributedString alloc]initWithString:@"00:00" attributes:self.attribtDic];
         _durationLabel.attributedText = attribtStr;
-        _durationLabel.font = [AlbumUtils fontWithSize:10];
+        _durationLabel.font = [NvAlbumUtils fontWithSize:10];
         _durationLabel.textColor = [UIColor whiteColor];
         [self.contentView addSubview:_durationLabel];
         [_durationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -82,7 +79,7 @@
         }];
         
         self.bottomBackView = [UIImageView new];
-        self.bottomBackView.image = [AlbumUtils imageWithName:@"videocam - material"];
+        self.bottomBackView.image = [NvAlbumUtils imageWithName:@"videocam - material"];
         [self.contentView addSubview:self.bottomBackView];
         [self.bottomBackView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.durationLabel.mas_left).offset(-3*SCREANSCALE);
@@ -108,7 +105,7 @@
     [self showLayer:item.isShowLayer withNum:item.number];
     if (!item.coverImage) {
         __weak typeof(self)weakSelf = self;
-        [[PHImageManager defaultManager] requestImageForAsset:item.asset targetSize:CGSizeMake(SCREENWIDTH/4, SCREENWIDTH/4) contentMode:PHImageContentModeAspectFill options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        [[PHImageManager defaultManager] requestImageForAsset:item.asset targetSize:CGSizeMake(SCREEN_WDITH/4, SCREEN_WDITH/4) contentMode:PHImageContentModeAspectFill options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             __strong typeof(weakSelf)self = weakSelf;
             self.imageView.image = result;
             item.coverImage = result;

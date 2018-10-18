@@ -8,9 +8,6 @@
 
 #import "NvSizeViewController.h"
 #import "NvSizeView.h"
-#import "AlbumUtils.h"
-#import "Masonry.h"
-#import "NVDefineConfig.h"
 
 @interface NvSizeViewController ()<NvSizeViewDelegate>
 

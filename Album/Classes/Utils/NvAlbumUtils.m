@@ -1,23 +1,43 @@
 //
-//  AlbumUtils.m
-//  Album
+//  NvAlbumUtils.m
+//  SDKDemo
 //
-//  Created by 刘东旭 on 2018/10/17.
-//  Copyright © 2018年 刘东旭. All rights reserved.
+//  Created by 刘东旭 on 2018/10/18.
+//  Copyright © 2018年 meishe. All rights reserved.
 //
 
-#import "AlbumUtils.h"
+#import "NvAlbumUtils.h"
 
-@implementation AlbumUtils
+@implementation NvAlbumUtils
 
-+ (UIFont*)fontWithSize:(float)size {
-    UIFont *font;
-    if (![UIFont fontWithName:@"PingFangSC-Semibold" size:size]) {
-        font = [UIFont boldSystemFontOfSize:size];
-    } else {
-        font = [UIFont fontWithName:@"PingFangSC-Semibold" size:size];
-    }
-    return font;
++ (NSString *)convertTimecode:(int64_t)time {
+    time = (time + 550000) / 1000000;
+    int min = (int)time / 60;
+    int sec = (int)time % 60;
+    if (min >= 10 && sec >= 10)
+        return [NSString stringWithFormat:@"%d:%d", min, sec];
+    else if (min >= 10)
+        return [NSString stringWithFormat:@"%d:0%d", min, sec];
+    else if (sec >= 10)
+        return [NSString stringWithFormat:@"0%d:%d", min, sec];
+    else
+        return [NSString stringWithFormat:@"0%d:0%d", min, sec];
+}
+
++ (NSString *)convertTimecodePrecision:(int64_t)time {
+    time += 50000;
+    int min = (int)(time / 60000000);
+    int sec = (int)((time % 60000000) / 100000);
+    int decimal = sec % 10;
+    sec /= 10;
+    if (min >= 10 && sec >= 10)
+        return [NSString stringWithFormat:@"%d:%d.%d", min, sec, decimal];
+    else if (min >= 10)
+        return [NSString stringWithFormat:@"%d:0%d.%d", min, sec, decimal];
+    else if (sec >= 10)
+        return [NSString stringWithFormat:@"0%d:%d.%d", min, sec, decimal];
+    else
+        return [NSString stringWithFormat:@"0%d:0%d.%d", min, sec, decimal];
 }
 
 + (UIImage *)imageWithName:(NSString *)name withScale:(float)scale {
@@ -51,7 +71,7 @@
         name = @"NvsSliderHandle";
     };
     
-    NSURL *bundleUrl = [[NSBundle bundleForClass:self.class] URLForResource:@"AlbumImage" withExtension:@"bundle"];
+    NSURL *bundleUrl = [[NSBundle bundleForClass:self.class] URLForResource:@"NvAlbumImage" withExtension:@"bundle"];
     if (bundleUrl == nil) {
         return @"";
     }
@@ -74,6 +94,16 @@
     
     //返回删掉旧名称加上新名称的路径
     return [[imgPath stringByDeletingLastPathComponent] stringByAppendingPathComponent:imageName];
+}
+
++ (UIFont*)fontWithSize:(float)size {
+    UIFont *font;
+    if (![UIFont fontWithName:@"PingFangSC-Semibold" size:size]) {
+        font = [UIFont boldSystemFontOfSize:size];
+    } else {
+        font = [UIFont fontWithName:@"PingFangSC-Semibold" size:size];
+    }
+    return font;
 }
 
 @end

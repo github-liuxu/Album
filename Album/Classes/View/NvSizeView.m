@@ -7,9 +7,6 @@
 //
 
 #import "NvSizeView.h"
-#import "Masonry.h"
-#import "NVDefineConfig.h"
-
 
 @interface NvSizeView()
 

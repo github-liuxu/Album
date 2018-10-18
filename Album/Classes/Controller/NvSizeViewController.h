@@ -6,6 +6,7 @@
 //  Copyright © 2018年 meishe. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "NvSizeView.h"
 
 @interface NvSizeViewController : UIViewController
