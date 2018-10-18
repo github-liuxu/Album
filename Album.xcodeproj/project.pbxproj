@@ -140,12 +140,12 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		0C688DFB2178CB77000F8131 /* Macor */ = {
+		0C688DFB2178CB77000F8131 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
 				0C688DFC2178CB77000F8131 /* NVDefineConfig.h */,
 			);
-			path = Macor;
+			path = Macro;
 			sourceTree = "<group>";
 		};
 		0C688DFD2178CBA4000F8131 /* CustomView */ = {
@@ -232,7 +232,7 @@
 			children = (
 				0C688E252178CBE2000F8131 /* Category */,
 				0C688DFD2178CBA4000F8131 /* CustomView */,
-				0C688DFB2178CB77000F8131 /* Macor */,
+				0C688DFB2178CB77000F8131 /* Macro */,
 				0C688DF72178CB04000F8131 /* Utils */,
 				0C688DF52178CADD000F8131 /* NvAlbumImage.bundle */,
 				0CBAF1FC217783AE006C726C /* Controller */,
