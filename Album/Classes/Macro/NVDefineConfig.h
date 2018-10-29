@@ -26,6 +26,8 @@ typedef enum {
 #define NV_STATUSBARHEIGHT [UIApplication sharedApplication].statusBarFrame.size.height
 #define NV_NAV_BAR_HEIGHT 44
 
+#define INDICATOR NV_STATUSBARHEIGHT>20?34:0
+
 //视频录制保存的路径
 #define LOCALDIR [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 #define VIDEO_PATH(string) [LOCALDIR stringByAppendingPathComponent:string]

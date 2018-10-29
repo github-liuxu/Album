@@ -199,41 +199,21 @@
         
         if (self.isOnlyImage) {
             [self.imageCollectionView mas_updateConstraints:^(MASConstraintMaker *make) {
-                if (KIsiPhoneX) {
-                    make.height.equalTo(@(collectionViewHeight-34));
-                } else {
-                    make.height.equalTo(@(collectionViewHeight));
-                }
+                make.height.equalTo(@(collectionViewHeight-INDICATOR));
             }];
         } else if (self.isOnlyVideo) {
             [self.videoCollectionView mas_updateConstraints:^(MASConstraintMaker *make) {
-                if (KIsiPhoneX) {
-                    make.height.equalTo(@(collectionViewHeight-34));
-                } else {
-                    make.height.equalTo(@(collectionViewHeight));
-                }
+                make.height.equalTo(@(collectionViewHeight-INDICATOR));
             }];
         } else {
             [self.albumCollectionView mas_updateConstraints:^(MASConstraintMaker *make) {
-                if (KIsiPhoneX) {
-                    make.height.equalTo(@(collectionViewHeight-34));
-                } else {
-                    make.height.equalTo(@(collectionViewHeight));
-                }
+                make.height.equalTo(@(collectionViewHeight-INDICATOR));
             }];
             [self.videoCollectionView mas_updateConstraints:^(MASConstraintMaker *make) {
-                if (KIsiPhoneX) {
-                    make.height.equalTo(@(collectionViewHeight-34));
-                } else {
-                    make.height.equalTo(@(collectionViewHeight));
-                }
+                make.height.equalTo(@(collectionViewHeight-INDICATOR));
             }];
             [self.imageCollectionView mas_updateConstraints:^(MASConstraintMaker *make) {
-                if (KIsiPhoneX) {
-                    make.height.equalTo(@(collectionViewHeight-34));
-                } else {
-                    make.height.equalTo(@(collectionViewHeight));
-                }
+                make.height.equalTo(@(collectionViewHeight-INDICATOR));
             }];
         }
         [bottomView layoutIfNeeded];
